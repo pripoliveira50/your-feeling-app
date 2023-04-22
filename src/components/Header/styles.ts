@@ -1,17 +1,18 @@
-import { StyleSheet } from 'react-native'
-import { colors, metrics } from '@global/index'
+import { StyleSheet } from "react-native";
+import { colors, metrics } from "@global/index";
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
     paddingTop: metrics.fiveFoldPixel + 15,
   },
   whitetitle: {
-    textAlign: 'center',
+    textAlign: "center",
     fontSize: metrics.doublePixel,
     color: colors.white,
-    fontWeight: 'bold',
+    fontWeight: "bold",
+    paddingHorizontal: metrics.triplePixel + metrics.pixel,
   },
   buttonContainer: {
     paddingHorizontal: metrics.triplePixel + 4,
@@ -21,16 +22,16 @@ const styles = StyleSheet.create({
   },
 
   backBlack: {
-    textAlign: 'center',
+    textAlign: "center",
     fontSize: metrics.doublePixel + 4,
     color: colors.black,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   backWhite: {
-    textAlign: 'center',
+    textAlign: "center",
     fontSize: metrics.doublePixel + 4,
     color: colors.white,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   primaryColor: {
     backgroundColor: colors.primary,
@@ -38,6 +39,6 @@ const styles = StyleSheet.create({
   whiteColor: {
     backgroundColor: colors.white,
   },
-})
+});
 
-export default styles
+export default styles;

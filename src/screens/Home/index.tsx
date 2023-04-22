@@ -1,29 +1,30 @@
-import React, { useEffect, useState } from 'react'
-import { View, ScrollView } from 'react-native'
+import React, { useEffect, useState } from "react";
+import { View, ScrollView } from "react-native";
 
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from "@react-navigation/native";
 
-import { getFeelings } from '@services/api'
+import { getFeelings } from "@services/api";
 
-import Header from '@components/Header'
-import Bubbles from '@components/Bubbles'
+import Header from "@components/Header";
+import Bubbles from "@components/Bubbles";
 
-import styles from './styles'
-import { FeelingsData } from '@services/types'
+import styles from "./styles";
+import { FeelingsData } from "@services/types";
+import { SCREEN } from "./constants";
 
 const Home = () => {
-  const navigation = useNavigation()
-  const [dataFeelings, setDataFeelings] = useState<FeelingsData[]>([])
+  const { navigate } = useNavigation();
+  const [dataFeelings, setDataFeelings] = useState<FeelingsData[]>([]);
 
   useEffect(() => {
     getFeelings().then((response) => {
-      return setDataFeelings(response)
-    })
-  }, [getFeelings])
+      return setDataFeelings(response);
+    });
+  }, [getFeelings]);
 
   return (
     <>
-      <Header primary title={'How are you feeling?'} />
+      <Header primary title={SCREEN.header} />
 
       <ScrollView style={styles.content}>
         <View style={styles.container}>
@@ -32,7 +33,7 @@ const Home = () => {
               <Bubbles
                 key={emoji}
                 onPress={() =>
-                  navigation.navigate('RateFeellings', {
+                  navigate("RateFeellings", {
                     emoji: emoji,
                     text: text,
                   })
@@ -44,6 +45,6 @@ const Home = () => {
         </View>
       </ScrollView>
     </>
-  )
-}
-export default Home
+  );
+};
+export default Home;

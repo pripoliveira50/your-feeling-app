@@ -1,36 +1,33 @@
-import React from 'react'
+import React from "react";
 
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from "@react-navigation/native";
 
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image } from "react-native";
 
-import Button from '@components/Button'
+import Button from "@components/Button";
 
-import welcome from '../../assets/welcome.png'
+import welcome from "../../assets/welcome.png";
 
-import styles from './styles'
+import styles from "./styles";
+import { SCREEN } from "./constants";
 
 const Welcome = () => {
-  const navigation = useNavigation()
-
-  function navigate() {
-    navigation.navigate('Home')
-  }
+  const { navigate } = useNavigation();
 
   return (
     <>
       <View style={styles.container}>
         <Image source={welcome} style={styles.image} />
-        <Text style={styles.title}>Welcome, shall we begin?</Text>
+        <Text style={styles.title}>{SCREEN.title}</Text>
         <Button
-          onPress={() => navigate()}
+          onPress={() => navigate("Home")}
           primaryTextButton
-          text={'Go'}
+          text={SCREEN.button}
           primary={false}
         />
       </View>
     </>
-  )
-}
+  );
+};
 
-export default Welcome
+export default Welcome;

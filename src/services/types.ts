@@ -1,8 +1,8 @@
-type feelingProps = {
-  emoji: string
-  text: string
-}
+export type FeelingProps = {
+  emoji: string;
+  text: string;
+};
 
 export type FeelingsData = {
-  feelings: feelingProps
-}[]
+  feelings: FeelingProps;
+}[];

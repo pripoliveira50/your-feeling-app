@@ -1,18 +1,20 @@
-import React from 'react'
+import React from "react";
 
-import { Modal, View, Text, Image } from 'react-native'
+import { Modal, View, Text, Image } from "react-native";
 
-import Button from '@components/Button'
+import Button from "@components/Button";
 
-import success from '../../assets/success.png'
-import styles from './styles'
-import { ModalSuccessProps } from './types'
+import success from "../../assets/success.png";
+import styles from "./styles";
+import { ModalSuccessProps } from "./types";
+import { MODAL } from "./constants";
 
 const ModalSuccess: React.FC<ModalSuccessProps> = ({
   isVisible,
   text,
   subText,
   onPress,
+  buttonText,
 }) => {
   return (
     <Modal style={styles.screenContainer} visible={isVisible}>
@@ -25,11 +27,11 @@ const ModalSuccess: React.FC<ModalSuccessProps> = ({
         <Text style={styles.subHeaderText}>{subText}</Text>
 
         <View style={styles.onClosed}>
-          <Button primary text={'Go to home'} onPress={onPress} />
+          <Button primary text={buttonText} onPress={onPress} />
         </View>
       </View>
     </Modal>
-  )
-}
+  );
+};
 
-export default ModalSuccess
+export default ModalSuccess;

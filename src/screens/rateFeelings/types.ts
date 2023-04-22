@@ -6,6 +6,14 @@ export enum FeelingsTypes {
   VOTE5 = 5,
 }
 
+export enum FeelingsNames {
+  Slinghtly = "Slinghtly",
+  ALittle = "A Little",
+  Fairly = "Fairly",
+  Very = "Very",
+  Extremely = "Extremely",
+}
+
 export interface Feelings {
-  [key: number]: string
+  [key: number]: string;
 }

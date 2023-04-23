@@ -39,5 +39,5 @@ Application that aims to choose your mood based on emoticons.
 
 ## Interface
 <p align="center">
-
+<img src="/.github/assets/app.gif" width="320"/>
 </p>

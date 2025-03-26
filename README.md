@@ -26,6 +26,19 @@
 
 ---
 
+## 🧠 Architecture & Technical Decisions
+
+- The project uses **React Navigation** (Native Stack) for lightweight and performant screen transitions.
+- **Global state** is managed with hooks and component props due to the app's small scope.
+- Styling is handled using **StyleSheet** and **Linear Gradient** for visually appealing transitions and screens.
+- A **modular folder structure** ensures separation of concerns between components, screens, services, and global styles.
+- All API interactions are centralized in a single Axios instance under `services/api.ts`.
+- UI feedback is delivered via a custom **success modal**, enhancing UX after key actions.
+- **Splash screen and icon configuration** are manually implemented in Android and iOS native folders.
+- The project uses **TypeScript** for type safety and better developer experience.
+
+---
+
 ## 🧠 Features
 
 - Splash screen setup for both platforms

@@ -39,16 +39,6 @@
 
 ---
 
-## 🧠 Features
-
-- Splash screen setup for both platforms
-- Custom app icon
-- Welcome screen with mood selection
-- Modal for success confirmation
-- Simple two-screen flow with navigation
-
----
-
 ## 📦 Requirements
 
 - Node.js and Yarn installed
